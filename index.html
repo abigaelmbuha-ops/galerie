@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Galerie Personnelle - Kahindo Mbuhavinywa Abigael</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#fdf8f0;color:#222;text-align:center}
+header{background:#0a2a5e;color:white;padding:30px 15px}
+header h1{margin:0;font-size:26px}
+header p{color:#f5d67b}
+.container{padding:20px;max-width:800px;margin:auto}
+.carte{background:white;border-radius:15px;padding:15px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.carte img{width:100%;border-radius:12px;cursor:pointer}
+.carte img:hover{opacity:0.9}
+.carte h2{color:#0a2a5e}
+.clic{font-size:13px;color:#666}
+footer{background:#0a2a5e;color:white;padding:15px}
+#grand{ display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000; }
+#grand img{ max-width:95%; max-height:90%; border-radius:10px; }
+#grand span{ position:absolute; top:15px; right:20px; color:white; font-size:35px; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>MA GALERIE PERSONNELLE</h1>
+<h2>KAHINDO MBUHAVINYWA ABIGAEL</h2>
+<p>Butembo / Goma</p>
+<p>Bienvenue dans ma galerie personnelle. Clique sur une photo pour la voir en grand.</p>
+</header>
+
+<div class="container">
+
+<div class="carte">
+<img src="https://res.cloudinary.com/cchcogkj/image/upload/v1794490081/IMG-20261112-WA0036.jpg" alt="Photo 1 - Mon style élégant" onclick="ouvrir(this.src)">
+<p class="clic">👆 Clique sur la photo pour voir en grand</p>
+<h2>1. Mon style élégant</h2>
+<p>Sur cette photo, j'aime l'élégance et le style. Être propre, bien habillée et confiante, c'est aussi une façon de montrer qui on est. J'aime la mode, la beauté et prendre soin de moi.</p>
+</div>
+
+<div class="carte">
+<img src="https://res.cloudinary.com/cchcogkj/image/upload/v1794490081/IMG-20261112-WA0037.jpg" alt="Photo 2 - L'élégance dans les détails" onclick="ouvrir(this.src)">
+<p class="clic">👆 Clique sur la photo pour voir en grand</p>
+<h2>2. L'élégance dans les détails</h2>
+<p>Sur cette photo, c'est une belle veste noire, élégante et classe. J'aime quand les petits détails font la différence. Pour moi, s'habiller avec soin, c'est montrer du respect pour soi-même et pour les autres.</p>
+</div>
+
+<div class="carte">
+<img src="https://res.cloudinary.com/cchcogkj/image/upload/v1794490081/IMG-20261112-WA0038.jpg" alt="Photo 3 - La douceur et la confiance" onclick="ouvrir(this.src)">
+<p class="clic">👆 Clique sur la photo pour voir en grand</p>
+<h2>3. La douceur et la confiance</h2>
+<p>Sur cette photo, c'est un bel ensemble rose en lin. J'aime les couleurs douces, la simplicité et la classe. Être une femme, c'est aussi être douce, forte et confiante en même temps.</p>
+</div>
+
+</div>
+
+<footer>
+<p>KAHINDO MBUHAVINYWA ABIGAEL - Ma Galerie Personnelle - Butembo / Goma</p>
+<p>Images hébergées sur Cloudinary</p>
+</footer>
+
+<div id="grand" onclick="fermer()">
+<span onclick="fermer()">×</span>
+<img id="photoGrand" src="">
+</div>
+
+<script>
+function ouvrir(src){
+  document.getElementById('photoGrand').src = src;
+  document.getElementById('grand').style.display = 'flex';
+}
+function fermer(){
+  document.getElementById('grand').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
